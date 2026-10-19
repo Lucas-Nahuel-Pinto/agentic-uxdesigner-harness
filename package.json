@@ -1,0 +1,8 @@
+{
+  "name": "agentic-uxdesigner-harness",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Agent console for UX Designer workflows: heuristic design reviews, wireframes, and local ACE-Step music generation",
+  "license": "MIT"
+}

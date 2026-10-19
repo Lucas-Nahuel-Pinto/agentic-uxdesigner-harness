@@ -1,0 +1,6 @@
+.env
+*.log
+outputs/
+*.wav
+*.mp3
+*.flac
