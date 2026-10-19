@@ -7,7 +7,7 @@ ACE-Step 1.5 install.
 ## What's inside
 
 ```
-.claude/skills/
+.opencode/skills/
   ux-design-review/         Heuristic UX audit (Nielsen + WCAG baseline), ranked findings
   ux-wireframe/             Standalone HTML wireframes and clickable mockups
   acestep-music/            Song/jingle generation via the local ACE-Step install
@@ -17,7 +17,6 @@ acestep/
   generate.py               ACE-Step 1.5 generation CLI (plain, cover mode, any vocal language)
   README.md                 Proven recipes + gotchas (caption control, language forcing, cover strengths)
 opencode.jsonc              OpenCode MCP config (engram + tavily)
-.mcp.json                   Claude Code MCP config (engram + tavily)
 .env.example                Credential template
 AGENTS.md                   Agent operating rules
 reports/                    Saved design reviews (only when requested)
@@ -67,5 +66,5 @@ generated in ~5–8 min per take on an 8 GB RTX-class GPU.
 ## Upstream attribution
 
 - `caveman` skill — © 2026 Julius Brussee, Apache-2.0. See
-  `.claude/skills/caveman/LICENSE-APACHE-2.0` and `NOTICE` in this directory.
+  `.opencode/skills/caveman/LICENSE-APACHE-2.0` and `NOTICE` in this directory.
 - `git-flow-master` — copied from the project QA boilerplate.

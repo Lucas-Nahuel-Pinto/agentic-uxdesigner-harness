@@ -6,21 +6,21 @@ generation with the local ACE-Step 1.5 install.
 ## Critical rules
 
 1. **CREDENTIALS**: ALWAYS read from `.env` (see `.env.example`). NEVER hardcode or guess secrets.
-2. **MCP / AUTH FAILURE = STOP IMMEDIATELY**: if an MCP fails auth or an env var is missing (`.mcp.json` uses `${VAR}` for Claude Code; `opencode.jsonc` uses `{env:VAR}` for OpenCode — OpenCode substitutes empty silently, so a 401/403 is the signal), do NOT work around it. STOP, name the exact env variable, point at `.env` / `.env.example`, and ask the user to fix `.env` + restart the agent session (env is cached at MCP spawn time).
+2. **MCP / AUTH FAILURE = STOP IMMEDIATELY**: if an MCP fails auth or an env var is missing (`opencode.jsonc` uses `{env:VAR}` — OpenCode substitutes empty silently, so a 401/403 is the signal), do NOT work around it. STOP, name the exact env variable, point at `.env` / `.env.example`, and ask the user to fix `.env` + restart the agent session (env is cached at MCP spawn time).
 3. **NO PRODUCT-CODE EDITS**: design reviews are critique-only and wireframes are artifacts of THIS repo. Changing product code belongs to the product repo, never here.
 4. **MUSIC = LOCAL, GENEROUSLY CAVEATED**: `acestep/generate.py` is the only music entry point. Read `acestep/README.md` before any run. Artist voice imitation or high-similarity covers: state the legal risk BEFORE generating (personal/local use OK; publishing is the user's risk).
-5. **GIT / PR WORK**: follow `.claude/skills/git-flow-master/` — semantic commit prefixes, no AI attribution in commits, confirm before push, never rewrite pushed history. Never commit generated audio or model files (`outputs/`, `*.wav`, `*.mp3` are gitignored).
-6. **DEFAULT VOICE**: caveman mode is the default conversational register (`.claude/skills/caveman/`). Code, commits, reports, and wireframe files are ALWAYS written in normal English (or Spanish when the user asks) — that boundary is built into the skill.
+5. **GIT / PR WORK**: follow `.opencode/skills/git-flow-master/` — semantic commit prefixes, no AI attribution in commits, confirm before push, never rewrite pushed history. Never commit generated audio or model files (`outputs/`, `*.wav`, `*.mp3` are gitignored).
+6. **DEFAULT VOICE**: caveman mode is the default conversational register (`.opencode/skills/caveman/`). Code, commits, reports, and wireframe files are ALWAYS written in normal English (or Spanish when the user asks) — that boundary is built into the skill.
 
 ## Skills
 
 | Skill | Purpose |
 |---|---|
-| `.claude/skills/ux-design-review/` | Heuristic UX audit: ranked findings + fixes (read-only) |
-| `.claude/skills/ux-wireframe/` | Standalone HTML wireframes and clickable mockups |
-| `.claude/skills/acestep-music/` | Song/jingle generation via `acestep/generate.py` |
-| `.claude/skills/git-flow-master/` | End-to-end git operator (branch, commit, PR, conflicts) |
-| `.claude/skills/caveman/` | Terse conversational voice (vendored, Apache-2.0) |
+| `.opencode/skills/ux-design-review/` | Heuristic UX audit: ranked findings + fixes (read-only) |
+| `.opencode/skills/ux-wireframe/` | Standalone HTML wireframes and clickable mockups |
+| `.opencode/skills/acestep-music/` | Song/jingle generation via `acestep/generate.py` |
+| `.opencode/skills/git-flow-master/` | End-to-end git operator (branch, commit, PR, conflicts) |
+| `.opencode/skills/caveman/` | Terse conversational voice (vendored, Apache-2.0) |
 
 ## MCPs
 
