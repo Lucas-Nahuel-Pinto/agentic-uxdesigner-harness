@@ -4,3 +4,7 @@ outputs/
 *.wav
 *.mp3
 *.flac
+
+# Local reports — never committed (folder kept alive by .gitkeep).
+reports/*
+!reports/.gitkeep
