@@ -4,7 +4,7 @@
 The model install, venv and checkpoints live OUTSIDE this repo (local content,
 several GB). Point ACESTEP_HOME at that install before running:
 
-    ACESTEP_HOME=C:/Agentic-Quality-Engineer/Projects/bunkai/acestep-local/ACE-Step-1.5
+    ACESTEP_HOME=/path/to/ACE-Step-1.5   # your OS's absolute path
 
 Run with the install's own venv python:
 
@@ -25,7 +25,7 @@ import sys
 
 os.environ.setdefault("ACESTEP_LM_BACKEND", "pt")
 
-DEFAULT_HOME = r"C:\Agentic-Quality-Engineer\Projects\bunkai\acestep-local\ACE-Step-1.5"
+DEFAULT_HOME = ""  # required: set ACESTEP_HOME to your local ACE-Step-1.5 install
 
 
 def parse_args():
@@ -53,6 +53,8 @@ def main():
     args = parse_args()
 
     home = os.environ.get("ACESTEP_HOME", DEFAULT_HOME)
+    if not home:
+        sys.exit("ACESTEP_HOME is not set — point it at your ACE-Step-1.5 install (see .env.example)")
     if not os.path.isdir(home):
         sys.exit(f"ACESTEP_HOME not found: {home} — set it to your ACE-Step-1.5 install")
     sys.path.insert(0, home)

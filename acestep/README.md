@@ -5,7 +5,7 @@ the recipe knowledge. The model install (checkpoints, venv, several GB) is
 **local content that lives outside this repo**:
 
 ```
-<ACESTEP_HOME>/            default: C:\Agentic-Quality-Engineer\Projects\bunkai\acestep-local\ACE-Step-1.5
+<ACESTEP_HOME>/            absolute path to the install, set via ACESTEP_HOME env var (no default)
   checkpoints/             acestep-v15-turbo + acestep-5Hz-lm-0.6B + vae + Qwen3 embedding
   .venv/Scripts/python.exe the python that runs generate.py
   docs/en/Tutorial.md      upstream docs (cover mode recipe ~lines 740-775)
@@ -17,7 +17,7 @@ int8 quantization + CPU offload automatically for that tier.
 ## Run
 
 ```bash
-export ACESTEP_HOME=/path/to/ACE-Step-1.5   # only if not at the default path
+export ACESTEP_HOME=/path/to/ACE-Step-1.5   # required — your OS's absolute path
 "$ACESTEP_HOME/.venv/Scripts/python.exe" acestep/generate.py \
   --caption "punk rock, energetic, distorted guitars, 178 bpm" \
   --lyrics-file song.txt --lang en --bpm 178 --duration 180
