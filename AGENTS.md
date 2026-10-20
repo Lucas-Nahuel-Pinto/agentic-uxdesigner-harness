@@ -21,6 +21,12 @@ generation with the local ACE-Step 1.5 install.
 | `.opencode/skills/acestep-music/` | Song/jingle generation via `acestep/generate.py` |
 | `.opencode/skills/git-flow-master/` | End-to-end git operator (branch, commit, PR, conflicts) |
 | `.opencode/skills/caveman/` | Terse conversational voice (vendored, Apache-2.0) |
+| `.agents/skills/threejs-*` (7) | Verified three.js r186 reference: fundamentals, interaction, animation, shaders, lighting, postprocessing, performance |
+| `.opencode/skills/impeccable/` | Frontend design operator: `/impeccable init\|critique\|audit\|polish\|animate\|...`. Telemetry off, no hooks (OpenCode has no hook surface) |
+| `.opencode/skills/img2threejs/` | Reference photo → quality-gated procedural Three.js model. Manual vendor (no nested `.git`); forge scripts need Python 3.10+ |
+
+Skills stack for 3D web work: `threejs-*` builds the scene, `img2threejs` fabricates
+models from photos, `impeccable` polishes the surrounding UI.
 
 ## MCPs
 
