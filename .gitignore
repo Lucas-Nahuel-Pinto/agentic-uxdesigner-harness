@@ -35,3 +35,6 @@ reports/*
 
 # Impeccable engine binary (20MB) — downloaded on first use, never committed.
 .opencode/skills/impeccable/scripts/bin/
+
+# brainstorming companion artifacts
+.superpowers/
