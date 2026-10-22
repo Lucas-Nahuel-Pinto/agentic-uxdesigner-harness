@@ -7,7 +7,7 @@
 
 ## 1. Contexto y objetivo
 
-Rediseño total del portfolio: el sitio actual **se reemplaza** por un walkthrough cinematográfico inspirado en videojuegos. El visitante entra a una oficina corporativa estilo *Mirror's Edge Catalyst*, es recibido por un fantasma que lo invita, es "poseído" por el avatar de Lucas y termina explorando los tres proyectos en primera persona a través de un panel de realidad aumentada.
+Rediseño total del portfolio: el sitio actual **se reemplaza** por un walkthrough cinematográfico inspirado en videojuegos. El visitante entra a una oficina corporativa estilo *Mirror's Edge Catalyst*, es recibido por un fantasma que lo invita; el fantasma se lanza y **posee al avatar de Lucas** (no al revés: el cuerpo se sobresalta y el fantasma queda mandando adentro), y el visitante toma su lugar — termina explorando los tres proyectos en primera persona con un panel de realidad aumentada. En el POV **no se ven las gafas de sol**: el panel simplemente se enciende como si el usuario las llevara puestas.
 
 **Prioridad**: balance 50/50 entre efecto wow cinemático y rapidez para reclutadores — el botón **SALTAR** siempre visible y carga de assets bajo demanda.
 
@@ -29,7 +29,7 @@ Rediseño total del portfolio: el sitio actual **se reemplaza** por un walkthrou
 | 6 | Dibujos 2D **dentro del render de Blender** → imposible descincronización | Sprites en overlay HTML/CSS (riesgo de sync) |
 | 7 | HUD de gafas (técnico, Mirror's Edge) ≠ Revista AR cómica (al abrir proyecto) — dos identidades separadas | Estilo cómic literal desde la grilla |
 | 8 | Voz EN la genera el usuario en ElevenLabs (mismo estilo que la ES) | TTS del navegador; subtítulos sin voz EN |
-| 9 | Los tres humanos/criaturas llevan **gafas de sol = dispositivo AR**; el POV hereda las del avatar | Gafas solo en el panel |
+| 9 | Los tres humanos/criaturas llevan **gafas de sol = dispositivo AR**; en el POV **no se muestran las gafas** — solo se enciende el HUD | Gafas visibles en primera persona; gafas solo en el panel |
 
 ## 3. Flujo de escenas
 
@@ -70,7 +70,7 @@ Escena 5  Case study HTML (Astro) /es/proyectos/*  → "volver" regresa al panel
 
 ## 5. Escenas 3 y 4 — primera persona y panel AR
 
-- **Escena 3** (three.js): vista en los zapatos de Lucas; se ven manos + entorno. Las gafas generan el **HUD AR** que abre directo con la **grilla de los 3 proyectos**:
+- **Escena 3** (three.js): vista en los zapatos de Lucas; se ven manos + entorno (las gafas de sol **no aparecen en el cuadro**). El **HUD AR** —generado por las gafas que el personaje lleva puestas, fuera de pantalla— abre directo con la **grilla de los 3 proyectos**:
   1. QA Flow Checklists — 221 decisiones · 5 checklists
   2. Jira Traceability Manager — 2-3h → 30s
   3. Harness Manager — 6 pestañas de panorama
