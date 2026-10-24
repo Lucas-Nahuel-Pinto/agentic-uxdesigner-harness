@@ -41,11 +41,13 @@
 
 **Prerequisito**: instalar **blender-mcp** (agregar a `opencode.jsonc` + addon en Blender) → requiere reiniciar la sesión del agente.
 
+**Pipeline (decidido 2026-10-23)**: Blender puro con assets stylized simples, sin etapa de video generativa IA — la IA video rompe sync por construcción, consistencia de personajes, control de cámara/match-cut y el reuso del set como GLB (spec decisión 11).
+
 | # | Tarea | Detalle |
 |---|---|---|
 | 3.1 | Set de oficina | Mirror's Edge Catalyst: amplia, blanca, ventanales, minimalista; un solo set fuente para video Y GLB futuro |
-| 3.2 | Personajes (4) | Fantasma (gel azul, sin boca, manos flotantes), avatar Lucas, 🦊 zorro UX, 🐿️ ardilla dev — los tres con gafas de sol |
-| 3.3 | Rigs + clips | Hablar, volar, posesión, sobresalto, pulgar; actuación del fantasma: vibración corporal por cadencia del audio, manos expresivas, ojos/cejas |
+| 3.2 | Personajes (4) | Fantasma (gel azul, sin boca, manos flotantes, **luz interior pulsante al hablar**), avatar Lucas, 🦊 zorro UX, 🐿️ ardilla dev — los tres con gafas de sol |
+| 3.3 | Rigs + clips | Hablar, volar, posesión, sobresalto, pulgar; actuación del fantasma: vibración corporal por cadencia del audio, **luz interior sincronizada por envolvente de amplitud (ffmpeg → keyframes)**, manos expresivas, ojos/cejas |
 | 3.4 | Doodles 2D | Planos billboard al lado del fantasma con keyframes alineados al audio (sync por construcción) |
 | 3.5 | Cámara | Objeto animado: 7 planos del spec; **giro orbital 180°** con encuadre constante; zoom final a la nuca |
 | 3.6 | Render | EEVEE (Cycles opcional para posesión); salida WebM VP9 + MP4 H.264, 2 bitrates (desktop/móvil) + poster; ≤ 8 MB desktop |

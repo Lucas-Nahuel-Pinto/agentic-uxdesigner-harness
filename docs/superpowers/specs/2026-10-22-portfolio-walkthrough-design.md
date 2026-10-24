@@ -30,6 +30,8 @@ Rediseño total del portfolio: el sitio actual **se reemplaza** por un walkthrou
 | 7 | HUD de gafas (técnico, Mirror's Edge) ≠ Revista AR cómica (al abrir proyecto) — dos identidades separadas | Estilo cómic literal desde la grilla |
 | 8 | Voz EN la genera el usuario en ElevenLabs (mismo estilo que la ES) | TTS del navegador; subtítulos sin voz EN |
 | 9 | Los tres humanos/criaturas llevan **gafas de sol = dispositivo AR**; en el POV **no se muestran las gafas** — solo se enciende el HUD | Gafas visibles en primera persona; gafas solo en el panel |
+| 10 | **Luz interior del fantasma** (emisión en el gel) que pulsa con la envolvente del audio mientras habla — indica visualmente de dónde sale la voz; misma animación sirve para ES y EN | Boca con visemas sincronizados (2 audios × 1 video → el otro idioma queda desincronizado) |
+| 11 | Pipeline de video: **Blender puro**, assets stylized simples, EEVEE — iteración barata y el set se reutiliza como GLB en Fase 4 | Bloqueo en Blender "pasado por" modelo de video IA (drift de personajes, sin control de timing ni trayectoria de cámara, rompe sync por construcción y el match-cut) |
 
 ## 3. Flujo de escenas
 
@@ -66,7 +68,7 @@ Escena 5  Case study HTML (Astro) /es/proyectos/*  → "volver" regresa al panel
 
 **Equipo** (vista del usuario): 🐿️ ardilla-dev a la izquierda, avatar de Lucas al centro, 🦊 zorro-UX a la derecha. Los tres con gafas de sol.
 
-**Actuación del fantasma**: sin boca; ondas de vibración corporal con la cadencia del audio, cuerpo vivo, ojos/cejas expresivos, **dos manos flotantes separadas del cuerpo** como voz principal (gesticulan, apuntan, hacen "vení", se disuelven al poseer), y **dibujos 2D simples** que poppean al lado con el sentido de cada frase ("soy Lucas" → credencial, "portfolio" → mini-navegador, "herramientas" → lupa, "vení" → flecha).
+**Actuación del fantasma**: sin boca; **luz interior pulsando con la envolvente del audio mientras habla** (el espectador ve de dónde sale la voz); ondas de vibración corporal con la cadencia del audio, cuerpo vivo, ojos/cejas expresivos, **dos manos flotantes separadas del cuerpo** como voz principal (gesticulan, apuntan, hacen "vení", se disuelven al poseer), y **dibujos 2D simples** que poppean al lado con el sentido de cada frase ("soy Lucas" → credencial, "portfolio" → mini-navegador, "herramientas" → lupa, "vení" → flecha).
 
 ## 5. Escenas 3 y 4 — primera persona y panel AR
 
