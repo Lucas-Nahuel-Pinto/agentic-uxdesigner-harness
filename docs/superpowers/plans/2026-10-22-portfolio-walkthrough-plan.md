@@ -49,7 +49,7 @@
 | 3.2 | Personajes (4) | Fantasma (gel azul, sin boca, manos flotantes, **luz interior pulsante al hablar**), avatar Lucas, 🦊 zorro UX, 🐿️ ardilla dev — los tres con gafas de sol |
 | 3.3 | Rigs + clips | Hablar, volar, posesión, sobresalto, pulgar; actuación del fantasma: vibración corporal por cadencia del audio, **luz interior sincronizada por envolvente de amplitud (ffmpeg → keyframes)**, manos expresivas, ojos/cejas |
 | 3.4 | Doodles 2D | Planos billboard al lado del fantasma con keyframes alineados al audio (sync por construcción) |
-| 3.5 | Cámara | Objeto animado: 7 planos del spec; **giro orbital 180°** con encuadre constante; zoom final a la nuca |
+| 3.5 | Cámara | Objeto animado: 7 planos del spec; **giro orbital 180°** con encuadre constante; zoom final a la nuca; **DOF: fondo desenfocado en planos 1–2** (atención en fantasma y doodles; EEVEE DOF nativo) |
 | 3.6 | Render | EEVEE (Cycles opcional para posesión); salida WebM VP9 + MP4 H.264, 2 bitrates (desktop/móvil) + poster; ≤ 8 MB desktop |
 | 3.7 | Audio separado | El video sale **sin audio embebido**; voces ES/EN como mp3 sueltos |
 

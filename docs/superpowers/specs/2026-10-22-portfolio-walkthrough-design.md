@@ -58,8 +58,8 @@ Escena 5  Case study HTML (Astro) /es/proyectos/*  → "volver" regresa al panel
 
 | Plano | Tiempo | Contenido |
 |---|---|---|
-| 1 | 0:00–0:03 | Negros → oficina **NO vacía** (personajes a lo lejos), luz de ventana; **el fantasma ya está en cuadro desde el primer frame y habla** — luz interior pulsando (establecimiento) |
-| 2 | 0:03–0:23 | Primer plano del fantasma hablando: audio ES/EN + subtítulos + doodles 2D al lado |
+| 1 | 0:00–0:03 | Negros → oficina **NO vacía** (personajes a lo lejos), luz de ventana, **fondo desenfocado (DOF)**; **el fantasma ya está en cuadro desde el primer frame y habla** — luz interior pulsando (establecimiento) |
+| 2 | 0:03–0:23 | Primer plano del fantasma hablando, **fondo desenfocado (DOF)**: audio ES/EN + subtítulos + doodles 2D al lado |
 | 3 | 0:23–0:27 | "Vení, acompañame" → vuelo al avatar central con estela luminosa |
 | 4 | 0:27–0:31 | Posesión: destello → sobresalto → recuperación → pulgar; cámara acerca a la cara (con gafas) |
 | 5 | 0:31–0:34 | Cartel HUD sutil "LUCAS PINTO — QA ENGINEER"; 🐿️ izquierda, avatar+gafas centro, 🦊 derecha |
@@ -99,7 +99,7 @@ Escena 5  Case study HTML (Astro) /es/proyectos/*  → "volver" regresa al panel
 - **Render**: EEVEE (Cycles como opción para el plano de la posesión).
 - **Personajes (4)**: fantasma (gel azul, sin boca, manos flotantes), avatar de Lucas, zorro UX (pelaje realista con hair particles), ardilla dev (igual). Pelo corto del avatar con cards.
 - **Entorno**: oficina Mirror's Edge Catalyst en Blender — un solo set que sirve para el render del video Y como fuente del GLB de la escena FP (versión simplificada) → coherencia visual total.
-- **Animación**: rig de los 4 + clips (hablar, volar, posesión, sobresalto, pulgar); cámara como objeto animado; doodles 2D como planos billboard en la misma escena.
+- **Animación**: rig de los 4 + clips (hablar, volar, posesión, sobresalto, pulgar); cámara como objeto animado (**DOF: fondo desenfocado en planos 1–2** para centrar la atención en fantasma y doodles); doodles 2D como planos billboard en la misma escena.
 - **Export**:
 
 | Salida | Uso |
