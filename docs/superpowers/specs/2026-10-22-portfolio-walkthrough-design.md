@@ -58,7 +58,7 @@ Escena 5  Case study HTML (Astro) /es/proyectos/*  → "volver" regresa al panel
 
 | Plano | Tiempo | Contenido |
 |---|---|---|
-| 1 | 0:00–0:03 | Negros → oficina vacía, luz de ventana (establecimiento) |
+| 1 | 0:00–0:03 | Negros → oficina **NO vacía** (personajes a lo lejos), luz de ventana; **el fantasma ya está en cuadro desde el primer frame y habla** — luz interior pulsando (establecimiento) |
 | 2 | 0:03–0:23 | Primer plano del fantasma hablando: audio ES/EN + subtítulos + doodles 2D al lado |
 | 3 | 0:23–0:27 | "Vení, acompañame" → vuelo al avatar central con estela luminosa |
 | 4 | 0:27–0:31 | Posesión: destello → sobresalto → recuperación → pulgar; cámara acerca a la cara (con gafas) |
