@@ -14,9 +14,18 @@
     "tavily": {
       "type": "remote",
       "url": "https://mcp.tavily.com/mcp/",
+      "oauth": false,
       "headers": {
         "Authorization": "Bearer {env:TAVILY_API_KEY}"
       }
+    },
+    "blender": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "blender-mcp"
+      ],
+      "enabled": false
     }
   }
 }
