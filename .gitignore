@@ -38,3 +38,6 @@ reports/*
 
 # brainstorming companion artifacts
 .superpowers/
+
+# playwright-cli session dumps (page snapshots + console logs)
+.playwright-cli/
