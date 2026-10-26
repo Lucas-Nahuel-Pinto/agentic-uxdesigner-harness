@@ -233,3 +233,52 @@ Flow: entry → screen A → screen B → success. Escape path: every screen lin
 | # | Decision | Owner | Deadline |
 |---|---|---|---|
 ```
+
+---
+
+## 08 · Dev handoff (brief for the dev agent)
+
+Not a design document: a work order addressed to another agent. It must stand
+alone, because that agent will not read this conversation.
+
+```md
+# Dev handoff — <project>
+
+- From: ux-design-workflow (agentic-uxdesigner-harness)
+- To: dev agent (`agentic-dev-boilerplate`)
+- Product repo: <path or URL>
+- Design package (this repo): outputs/ux/<slug>/
+  - 01-discovery.md · 02-ia-flows.md · 03-wireframes/ · 04-ui-direction.md
+  - 06-audit.md (accepted fixes) · 07-handoff.md (build spec)
+
+## Goal
+<One sentence: what the built result must let a user do.>
+
+## Build order
+1. <screen> — <why first>
+2. <screen>
+3. <screen>
+
+## Fidelity
+- Mockups are ratified by the user on <date>: treat them as the visual source.
+- Tokens: table in `04-ui-direction.md` (or DESIGN.md if you author it there).
+- Do NOT redesign, do NOT substitute components, do NOT change copy without
+  asking. Implementation detail (file layout, state library) is yours.
+
+## Definition of done
+- Every screen in `03-wireframes/` exists, with the states listed in
+  `07-handoff.md`.
+- Accessibility requirements in `07-handoff.md` met (roles, keyboard, contrast).
+- Acceptance criteria in `07-handoff.md` pass.
+
+## Out of scope
+- <what not to build>
+
+## Open decisions you may close yourself
+| # | Decision | Suggested default |
+|---|---|---|
+
+## Questions -> come back to the design side with
+<what must NOT be silently resolved>
+```
+

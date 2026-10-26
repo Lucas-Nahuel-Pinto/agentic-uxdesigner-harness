@@ -14,7 +14,8 @@ description: >
 
 # ux-design-workflow
 
-Seven stages. Each one produces an artifact, and each one ends at a gate: the
+Seven design stages, plus the handoff that hands implementation to another
+agent. Each design stage produces an artifact, and each one ends at a gate: the
 next stage does not start until the artifact satisfies its exit criteria and
 the user approves. Cheap to change at stage 1, expensive at stage 7 — that is
 why the order is not negotiable.
@@ -50,14 +51,51 @@ single file into `reports/`.
 | 5 | Usability test | main agent + `ux-review` | `05-usability-test.md` | Task list, script, environments, scoring rubric; findings synthesized with severity and a fix each |
 | 6 | Audit | `ux-review` / `ux-design-review` | `06-audit.md` | Ranked findings (blocker → polish), every one cited to a heuristic or WCAG rule, blocking vs polish separated |
 | 7 | Handoff | `ux-handoff` subagent | `07-handoff.md` | Components with states, tokens, a11y requirements, acceptance criteria, open decisions — enough for a developer to build without asking |
+| 8 | Dev handoff | `ux-handoff` + main agent | `08-dev-handoff.md` | Package complete and ratified; the task is launched in the dev agent (`agentic-dev-boilerplate`) and **nothing is implemented here** |
 
 Details, step-by-step instructions and templates per stage:
 `references/stages.md`. Artifact skeletons: `references/artifacts.md`.
+
+## Handoff to the dev agent (stage 8)
+
+This console designs. Implementation — code, config, tests, build, deploy —
+belongs to the dev agent configured in
+`C:\Agentic-Quality-Engineer\Projects\agentic-dev-boilerplate`. When a design is
+approved, stage 8 produces a package the dev agent can execute without a
+meeting:
+
+```
+outputs/ux/<slug>/
+  07-handoff.md          components, tokens, a11y, acceptance criteria
+  08-dev-handoff.md      the task brief for the dev agent (see artifacts.md)
+  03-wireframes/*.html   ratified screens — the dev agent treats these as the mockups
+```
+
+The dev agent's own rules make this the only viable path: it never invents UI,
+it treats mockups as human-ratified artifacts, and it builds against a
+`DESIGN.md` (Google Labs spec) at the product root. So stage 4 tokens and stage
+7 components must be complete enough to become that `DESIGN.md`; if the user
+wants the design system authored by the dev side, hand over the token table and
+say so explicitly.
+
+Launch it in the dev agent's repo with the package path as the only input:
+
+> Read `outputs/ux/&lt;slug&gt;/08-dev-handoff.md` plus the files it lists, then
+> implement screen by screen. Do not redesign; if something is missing, stop and
+> ask.
+
+Never re-implement inside this repo, not even "just this small fix" — a design
+console that ships code stops being a design console.
+
 
 ## Non-negotiables
 
 - **Artifacts over edits.** Nothing here touches product code in another repo.
   Output is files in this repo (`outputs/ux/…`, `reports/`).
+- **Design only, implementation is a handoff.** The moment a task means
+  production code, config, tests, build or deploy, it goes to the dev agent
+  (`agentic-dev-boilerplate`) with the stage-8 package. "Just this small fix"
+  is how a design console turns into a bad code editor.
 - **No stage ships on vibes.** Every statement is evidence, assumption or
   unknown — labelled. Stage artifacts carry a short `## Evidence` section.
 - **Accessibility is a stage input, not a final pass.** WCAG checks start at
@@ -84,6 +122,7 @@ Details, step-by-step instructions and templates per stage:
 | "test it with users" | Stage 5 |
 | "is this usable" / "revisá el diseño" | Stage 6 (`ux-design-review`) |
 | "spec it for dev" / "handoff" | Stage 7 (`ux-handoff`) |
+| "implement it" / "build it" / "code it" / "programá esto" | Stage 8 — package + hand over to the dev agent; never code here |
 | "review the live page" | `ux-design-review` + `/playwright-cli` capture, then `ux-vision` |
 
 ## Fast paths

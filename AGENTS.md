@@ -14,6 +14,8 @@ generator.
 3. **NO PRODUCT-CODE EDITS**: design reviews are critique-only and wireframes are artifacts of THIS repo. Changing product code belongs to the product repo, never here.
 4. **GIT / PR WORK**: follow `.opencode/skills/git-flow-master/` — semantic commit prefixes, no AI attribution in commits, confirm before push, never rewrite pushed history. Never commit generated media (`outputs/`, `*.wav`, `*.mp3`, `*.png` are gitignored).
 5. **DEFAULT VOICE**: caveman mode is the default conversational register (`.opencode/skills/caveman/`). Code, commits, reports, and wireframe files are ALWAYS written in normal English (or Spanish when the user asks) — that boundary is built into the skill.
+6. **UX DESIGNS, DEV BUILDS**: this console never writes implementation. Brief, research, IA, flows, wireframes, UI direction, tokens, audits and specs are produced here; the moment a task means production code, config, tests, build or deploy, it is handed off to the dev agent in `C:\Agentic-Quality-Engineer\Projects\agentic-dev-boilerplate` with the stage-8 package (`.opencode/skills/ux-design-workflow/references/artifacts.md#08--dev-handoff`). No exceptions, no "just this small fix": implementation belongs to the dev agent, and a design tool that ships code stops being a design tool.
+7. **CLOSED-LOOP GATES**: a stage is done when its artifact exists, names its evidence, and the user approved it. Never advance two stages on one approval, and never mark a gate approved on the user's behalf.
 
 ## Skills
 

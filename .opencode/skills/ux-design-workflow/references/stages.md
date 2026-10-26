@@ -283,3 +283,49 @@ worth copying to `reports/` when the user asks to keep it.
 - [ ] Every interactive element has keyboard and screen-reader behaviour.
 - [ ] Acceptance criteria are testable, not aspirational.
 - [ ] Open decisions are visible, not hidden in prose.
+
+---
+
+## 8 · Dev handoff
+
+**Purpose:** move the approved design out of this console and into the dev
+agent without losing a single decision on the way.
+
+**Owner:** `ux-handoff` subagent + main agent. Implementation is executed by the
+dev agent configured in `agentic-dev-boilerplate` — never here.
+
+**Inputs:** `07-handoff.md`, `03-wireframes/`, `04-ui-direction.md`, the audit's
+accepted fixes.
+
+**Steps**
+
+1. **Assemble** the package: stage 7 spec, ratified wireframes, token table,
+   open decisions. Only files that are true right now.
+2. **Write `08-dev-handoff.md`** for the dev agent: goal, build order (which
+   screen first), the exact artifact paths, what must not be redesigned,
+   definition of done, and the decisions the dev side is allowed to make
+   (implementation detail) versus the ones it must not (visual intent).
+3. **Ratify the mockups with the user.** The dev side treats wireframes as
+   mockups and requires human ratification; a package without that line sends
+   the dev agent back to invent UI, which its own rules forbid.
+4. **Launch in the dev repo** with the package path as the only input. In this
+   repo, stage 8 ends here.
+5. **Close the loop:** when the dev agent reports the build, review the result
+   with stage 6 (`ux-review`, `/playwright-cli` capture). Design feedback, not
+   code edits.
+
+**Artifact `08-dev-handoff.md`:** the brief for the other agent, the package
+listing, the ratification line, definition of done, and what is explicitly out
+of scope.
+
+**Gate**
+
+- [ ] Package is complete: spec + wireframes + tokens + open decisions.
+- [ ] The user ratified the mockups in writing.
+- [ ] `08-dev-handoff.md` names what must not be redesigned.
+- [ ] Nothing was implemented in this console.
+- [ ] The dev task is launched (or explicitly queued by the user).
+
+**Costliest failure:** an ambiguous package. The dev agent fills the gap by
+inventing UI, and the design review then argues with a build nobody designed.
+
