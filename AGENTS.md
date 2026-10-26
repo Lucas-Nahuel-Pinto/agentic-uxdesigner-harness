@@ -3,6 +3,12 @@
 UX Designer console: heuristic design reviews, wireframes/mockups, and music
 generation with the local ACE-Step 1.5 install.
 
+Scope: **UX/UI design only.** Film/video work moved out on 2026-10-25 — the
+filmmaking skills, the Seedance prompt pack and the smoke-test assets live in
+`C:\Agentic-Quality-Engineer\Projects\agentic-filmmaker-harness`. Local image
+and video generation (ComfyUI + models, ~30 GB under `C:/AI`) was uninstalled
+the same day: cloud services are the generation path from now on.
+
 ## Critical rules
 
 1. **CREDENTIALS**: ALWAYS read from `.env` (see `.env.example`). NEVER hardcode or guess secrets.
