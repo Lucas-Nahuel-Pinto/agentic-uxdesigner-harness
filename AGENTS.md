@@ -2,13 +2,10 @@
 
 UX Designer console: heuristic design reviews and wireframes/mockups.
 
-Scope: **UX/UI design only.** Audio/video generation and film work moved out
-on 2026-10-25 — the filmmaking skills, VoiceStudio, ACE-Step music, the
-Seedance prompt pack and the smoke-test assets live in
-`C:\Agentic-Quality-Engineer\Projects\agentic-filmmaker-harness`. Local image
-and video generation (ComfyUI + models, ~30 GB under `C:/AI`) was uninstalled
-the same day: cloud services are the pixel path from now on, audio belongs to
-the filmmaker harness.
+Scope: **UX/UI design only.** No pixel, audio or video generation in this
+console. Local image and video generation (ComfyUI + models, ~30 GB under
+`C:/AI`) was uninstalled on 2026-10-25 — never propose reinstalling a local
+generator.
 
 ## Critical rules
 

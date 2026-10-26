@@ -3,9 +3,6 @@
 Agent console for **UX Designer workflows**: heuristic design reviews and
 fast wireframes/mockups.
 
-> Audio, video and film generation live in
-> `../agentic-filmmaker-harness` (ACE-Step music, VoiceStudio, cloud video).
-
 ## What's inside
 
 ```

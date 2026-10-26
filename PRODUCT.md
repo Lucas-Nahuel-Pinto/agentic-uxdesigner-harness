@@ -24,8 +24,7 @@ can be requested on demand and delivered without ever touching product code.
 A curated, opinionated console — not a generic coding agent with design plugins.
 Its differentiator is the packaged workflow itself: a Nielsen + WCAG review rubric
 and wireframe recipes, so results are reproducible. Audio, video and film
-generation live in the sibling `agentic-filmmaker-harness` console (moved
-2026-10-25 along with ACE-Step, VoiceStudio and the film skills).
+generation are out of scope (moved out on 2026-10-25).
 
 ## Operating Context
 
@@ -81,9 +80,8 @@ generation live in the sibling `agentic-filmmaker-harness` console (moved
    in-repo so any session can repeat a result.
 3. Loud failure over silent workarounds — missing credentials or auth problems
    stop the run and name the exact env var.
-4. Narrow scope — audio, video and film generation belong to the sibling
-   `agentic-filmmaker-harness`; work outside UX/UI is redirected there, not
-   absorbed here.
+4. Narrow scope — audio, video and film generation are out of scope; work
+   outside UX/UI is refused, not absorbed here.
 
 ## Accessibility & Inclusion
 
