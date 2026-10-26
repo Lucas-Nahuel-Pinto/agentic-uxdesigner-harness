@@ -19,6 +19,7 @@ generator.
 
 | Skill | Purpose |
 |---|---|
+| `.opencode/skills/ux-design-workflow/` | End-to-end UX workflow: brief → discovery → IA/flows → wireframes → UI direction → usability test → audit → handoff, with a user gate per stage |
 | `.opencode/skills/ux-design-review/` | Heuristic UX audit: ranked findings + fixes (read-only) |
 | `.opencode/skills/ux-wireframe/` | Standalone HTML wireframes and clickable mockups |
 | `.opencode/skills/git-flow-master/` | End-to-end git operator (branch, commit, PR, conflicts) |
@@ -30,6 +31,20 @@ generator.
 
 Skills stack for 3D web work: `threejs-*` builds the scene, `img2threejs` fabricates
 models from photos, `impeccable` polishes the surrounding UI.
+
+## Subagents
+
+| Agent | Role | Stage it owns |
+|---|---|---|
+| `.opencode/agents/ux-research.md` | Discovery synthesis: JTBD, segments, journey, risk-ranked assumptions | 1 |
+| `.opencode/agents/ux-architect.md` | IA: sitemap, flows, screen inventory with states, content model | 2 |
+| `.opencode/agents/ux-wireframe.md` | Builds standalone HTML wireframes (artifact-only) | 3 |
+| `.opencode/agents/ux-review.md` | Judgment: ranked heuristic + WCAG findings with fixes | 5, 6 |
+| `.opencode/agents/ux-vision.md` | Reads images: layout, contrast, responsive states, render defects | any (verification) |
+| `.opencode/agents/ux-handoff.md` | Buildable spec: components, tokens, a11y, acceptance criteria | 7 |
+
+`.opencode/skills/ux-design-workflow/` is the orchestrator: it routes each stage
+to the agent above and holds the gate. `/ux` enters the workflow.
 
 ## MCPs
 

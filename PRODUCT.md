@@ -15,9 +15,11 @@ may read the outputs, but the operator is the primary user.
 
 ## Product Purpose
 
-A console that equips one agent with a repeatable UX-designer workflow: heuristic
-design reviews and fast wireframes/mockups. Success means each of those artifacts
-can be requested on demand and delivered without ever touching product code.
+A console that equips one agent with a repeatable UX-designer workflow: discovery
+synthesis, information architecture and flows, wireframes, UI direction and tokens,
+usability testing, heuristic/accessibility audits, and design handoff. Success means
+each stage can be requested on demand, produces a reviewable artifact, and is
+delivered without ever touching product code.
 
 ## Positioning
 
@@ -28,9 +30,9 @@ generation are out of scope (moved out on 2026-10-25).
 
 ## Operating Context
 
-- OpenCode agent console; skills invoked by name (`/ux-design-review`,
-  `/ux-wireframe`, plus vendored caveman, git-flow-master,
-  img2threejs, impeccable).
+- OpenCode agent console; skills invoked by name (`/ux-design-workflow`,
+  `/ux-design-review`, `/ux-wireframe`, plus vendored caveman, git-flow-master,
+  img2threejs, impeccable); `/ux` enters the pipeline.
 - MCPs: `engram` (persistent memory, env read at session start; `engram` must be on
   PATH) and `tavily` (web search).
 - Saved design reviews go in `reports/` only when requested; wireframes are
@@ -38,9 +40,12 @@ generation are out of scope (moved out on 2026-10-25).
 
 ## Capabilities and Constraints
 
-- Skills: heuristic UX audit (Nielsen + WCAG baseline, ranked findings, read-only),
-  standalone HTML wireframes/clickable mockups, plus git operator and
-  terse-voice vendored skills.
+- Skills: `ux-design-workflow` (7-stage pipeline with a user gate per stage,
+  artifacts in `outputs/ux/<project>/`), heuristic UX audit (Nielsen + WCAG
+  baseline, ranked findings, read-only), standalone HTML wireframes/clickable
+  mockups, plus git operator and terse-voice vendored skills.
+- Subagents: `ux-research` (1), `ux-architect` (2), `ux-wireframe` (3),
+  `ux-review` (5-6), `ux-vision` (render inspection), `ux-handoff` (7).
 - Operating rules that future work must preserve:
   - Credentials ALWAYS from `.env` (template `.env.example`); never hardcoded.
   - MCP or auth failure = STOP, name the missing env var, no workarounds
