@@ -87,6 +87,35 @@ Launch it in the dev agent's repo with the package path as the only input:
 Never re-implement inside this repo, not even "just this small fix" — a design
 console that ships code stops being a design console.
 
+## Narrative handoff (script + storyboard)
+
+When the design depends on a story — a comic, a scroll narrative, a campaign
+film, a character-led journey — the writing and the boarding belong to the
+filmmaker console:
+
+`C:\Agentic-Quality-Engineer\Projects\agentic-filmmaker-harness`
+(`.opencode/skills/filmmaker/`, stages 0–2: treatment → screenplay → shot list +
+storyboard + bible).
+
+This console keeps the **narrative brief**: audience, chapters, what each
+chapter must prove, the funnel, copy constraints, languages, and the panel
+budget. It does not write the screenplay or draw the board.
+
+```
+outputs/ux/<slug>/
+  08-filmmaker-handoff.md    narrative brief + beats + constraints (this repo)
+```
+
+The filmmaker agent writes into its own project folder
+(`outputs/film/<slug>/01-screenplay.md`, `02-shotlist.md`, `02-storyboard/`,
+`bible.md`). Adapt its shot vocabulary to the medium: for a web comic a "shot"
+is a panel, the "camera" is the parallax layer stack, and the storyboard carries
+layer breakdown and scroll position instead of lens and duration.
+
+No pixels are generated from either side without a gate, and cloud generation
+is the filmmaker console's call — never this one.
+
+
 
 ## Non-negotiables
 
@@ -123,6 +152,7 @@ console that ships code stops being a design console.
 | "is this usable" / "revisá el diseño" | Stage 6 (`ux-design-review`) |
 | "spec it for dev" / "handoff" | Stage 7 (`ux-handoff`) |
 | "implement it" / "build it" / "code it" / "programá esto" | Stage 8 — package + hand over to the dev agent; never code here |
+| "write the story" / "guion" / "storyboard" / "comic script" | Narrative handoff → filmmaker console (below) |
 | "review the live page" | `ux-design-review` + `/playwright-cli` capture, then `ux-vision` |
 
 ## Fast paths
